@@ -32,7 +32,7 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 	private JPanel p1, p2, p3, addrPanel;
 	private JLabel lblTitle;
 	private JButton btnOK, btnCancel;
-	private JTextField jf1, jf2, jf3, jf4;
+	private JTextField jf1, jf2, jf3;
 	private String UpdateSql;
 	private boolean inputCheck;
 	private DefaultTableModel tableModel;
@@ -106,7 +106,6 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 		btnOK.addActionListener(this);
 		btnCancel = new JButton("취소");
 		btnCancel.addActionListener(this);
-
 		p3.add(btnOK);
 		p3.add(btnCancel);
 
@@ -136,7 +135,7 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 					if (selectedIndex == index) {
 						if (city != null) {
 							disVec.add(city);
-							System.out.println(city);
+						
 						}
 					}
 				}
@@ -149,7 +148,8 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 			name = jf1.getText();
 			num = jf2.getText();
 			phone = jf3.getText();
-			addr = jf4.getText();
+			addr = city.getSelectedItem().toString()+" "+district.getSelectedItem().toString();
+			
 
 			String sql = "SELECT * FROM MEMBER WHERE MB_NUM ='" + num + "'";
 			ResultSet rs = db.DB.getResultSet(sql);
@@ -172,7 +172,6 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 				jf1.setText("");
 				jf2.setText("");
 				jf3.setText("");
-				jf4.setText("");
 			}
 		} else if (obj == btnCancel) {
 			dispose();
@@ -216,7 +215,6 @@ public class Registration extends JFrame implements ActionListener, ItemListener
 		Object obj = e.getItem();
 
 		if (e.getStateChange() == ItemEvent.SELECTED) {
-			System.out.println(obj + "입니다.");
 			String sql = "SELECT * FROM F11.CITYS";
 			ResultSet rs = db.DB.getResultSet(sql);
 			try {
