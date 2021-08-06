@@ -33,6 +33,7 @@ public class Search extends JFrame implements ActionListener {
 //		setLocation(800, 300);
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		tableModel = Management.getTableModel();
 		// 레이아웃
 		setLayout(new BorderLayout());
 
