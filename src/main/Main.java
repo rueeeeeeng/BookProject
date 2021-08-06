@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import main.book.Management;
 import main.lental.BookManagement;
 import main.lental.LentalBook;
+import main.member.MemberList;
 
 public class Main extends JFrame implements ActionListener {
 	ImageIcon icon;
@@ -78,8 +79,8 @@ public class Main extends JFrame implements ActionListener {
 
 		if (obj == btnMember) {
 //			dispose();
-			this.setVisible(false);
-
+			db.DB.init();
+			new MemberList();
 		} else if (obj == btnBook) {
 			db.DB.init();
 			new main.book.Management();
