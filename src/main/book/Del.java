@@ -25,7 +25,7 @@ public class Del extends JFrame implements ActionListener {
 		setSize(350, 250);
 		setLocationRelativeTo(this);
 //		setLocation(800, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// 레이아웃
 		setLayout(new BorderLayout());

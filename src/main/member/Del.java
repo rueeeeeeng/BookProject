@@ -23,7 +23,7 @@ public class Del extends JFrame implements ActionListener{
 	public Del() {
 		setTitle("회원삭제");
 		setSize(300,200);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(this);
 		setResizable(false);
 		

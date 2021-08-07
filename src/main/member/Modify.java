@@ -33,7 +33,7 @@ public class Modify extends JFrame implements ActionListener{
 	public Modify() {
 		setTitle("회원정보 수정");
 		setSize(380, 230);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(this);
 		setResizable(false);
 		
