@@ -135,7 +135,7 @@ public class MemberList extends JFrame implements ActionListener {
 			//new Modify();
 		} else if (obj == btnChange) {
 //			dispose();
-			new Change();
+			new Modify();
 		} else if (obj == btnDel) {
 //			dispose();
 			new Del();

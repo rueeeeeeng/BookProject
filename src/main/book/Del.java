@@ -77,9 +77,10 @@ public class Del extends JFrame implements ActionListener {
 				if (check) {
 					db.DB.executeQuery(sql);
 					JOptionPane.showMessageDialog(null, "삭제가 완료되었습니다.", "메시지", JOptionPane.INFORMATION_MESSAGE);
+					tfNum.setText("");
 				} else
 					JOptionPane.showMessageDialog(null, "검색하신 도서가 없습니다.");
-
+				tfNum.setText("");
 			}
 
 		} else if (obj == btnCancel) {
