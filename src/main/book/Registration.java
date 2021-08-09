@@ -28,7 +28,7 @@ public class Registration extends JFrame implements ActionListener {
 		setSize(300, 250);
 		setLocationRelativeTo(this);
 //		setLocation(800, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
 
 		p1 = new JPanel();
