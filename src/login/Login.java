@@ -116,7 +116,7 @@ public class Login extends JFrame implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * id,pw중복체크 메서드
+	 * id,pw체크 메서드
 	 * 
 	 * @param rs id, pw 가져오는 db쿼리
 	 * @return 정보가 있으면 true, 없으면 false
