@@ -24,6 +24,7 @@ public class MemberList extends JFrame implements ActionListener {
 	private JLabel lbl;
 	private ResultSet rs;
 	private String sql;
+	private Search mSeach;
 	private static JTable table;
 	private static DefaultTableModel tableModel;
 	private static String header[] = { "이름", "주민번호", "전화번호", "주소" };
@@ -35,6 +36,7 @@ public class MemberList extends JFrame implements ActionListener {
 	public static String[] getHeader() {
 		return header;
 	}
+
 
 	public static JTable getTable() {
 		return table;
@@ -103,6 +105,8 @@ public class MemberList extends JFrame implements ActionListener {
 		setVisible(true);
 	}
 
+
+
 	public static void main(String[] args) {
 		db.DB.init();
 		new MemberList();
@@ -126,10 +130,12 @@ public class MemberList extends JFrame implements ActionListener {
 		} else if (obj == btnSearch) {
 			db.DB.init();
 //			dispose();
-			new Modify();
+			new Search();
+			
+			//new Modify();
 		} else if (obj == btnChange) {
 //			dispose();
-			new Change();
+			new Modify();
 		} else if (obj == btnDel) {
 //			dispose();
 			new Del();

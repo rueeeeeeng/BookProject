@@ -28,7 +28,7 @@ public class LentalBook extends JFrame implements ActionListener{
 	public LentalBook(String title, int width, int height) {
 		setTitle(title);
 		setSize(width, height);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(this);
 		setResizable(false);
 		
